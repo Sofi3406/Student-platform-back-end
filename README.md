@@ -63,14 +63,15 @@ student-platform-back-end/
 
 
 
-🔑 Authentication Flow
-POST /api/v1/auth/register — Register (role: admin, teacher, student, parent)
+### 🔑 Authentication Flow
 
-POST /api/v1/auth/login — Get accessToken + refreshToken
+| Endpoint                     | Method | Access                     |
+|------------------------------|--------|----------------------------|
+| POST /api/v1/auth/register    | POST   | Register (admin, teacher, student, parent) |
+| POST /api/v1/auth/login       | POST   | Get accessToken + refreshToken             |
+| POST /api/v1/auth/refresh-token | POST | Refresh expired token                       |
+| POST /api/v1/auth/logout      | POST   | Invalidate refresh token                    |
 
-POST /api/v1/auth/refresh-token — Refresh expired token
-
-POST /api/v1/auth/logout — Invalidate refresh token
              
 
 
@@ -111,3 +112,12 @@ This project is open source and free to use.
        Built with ❤️ by Sofiya
       Email: sofiyasin190@gmail.com
        Telegram: @wisdom0746
+
+
+
+       ## 🎥 Demonstration Video
+
+Check out the demo of the **Student Platform Backend** here:
+
+[![Demo Video]("
+https://www.awesomescreenshot.com/video/42800632?key=6cfd9a24b7d073f6a6d6ed015cd276b2")

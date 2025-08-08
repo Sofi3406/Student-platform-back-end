@@ -1,4 +1,4 @@
-// src/utils/responseHandler.js
+// resHandler
 exports.sendResponse = (res, statusCode, success, message, data = null) => {
   res.status(statusCode).json({
     success,

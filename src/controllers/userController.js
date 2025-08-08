@@ -7,7 +7,6 @@ exports.getUsersByRole = async (req, res) => {
     const role = req.query.role;
     if (!role) return sendResponse(res, 400, false, 'Role query param is required');
 
-    // ✅ Optional: restrict to known roles
     const allowedRoles = ['student', 'teacher', 'admin'];
     if (!allowedRoles.includes(role)) {
       return sendResponse(res, 400, false, 'Invalid role type');

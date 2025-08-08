@@ -1,4 +1,4 @@
-// src/controllers/aiController.js
+// aiController
 const { generateLessonPlan } = require('../services/googleGeminiService');
 const { sendResponse } = require('../utils/responseHandler');
 
@@ -11,8 +11,6 @@ exports.generateLessonPlanHandler = async (req, res) => {
     if (err.message.includes('overloaded') || err.message.includes('503')) {
       return sendResponse(res, 503, false, 'The AI service is busy. Please try again later.');
     }
-
-    // Default error handler
     sendResponse(res, 500, false, err.message);
   }
 };
